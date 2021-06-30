@@ -1,0 +1,52 @@
+name: 'gql-inspector'
+description: 'Compare GraphQL schemas, find breaking changes, find similar types.'
+inputs:
+  name:
+    description: |
+      The name of the check. In case of multiple GraphQL Inspector Actions, use `name` to prevent GitHub from overwriting results.
+    default: 'GraphQL Inspector'
+    required: true
+  annotations:
+    description: 'Use annotation'
+    default: 'true'
+    required: true
+  fail-on-breaking:
+    description: 'Fail on breaking changes'
+    default: 'true'
+    required: true
+  approve-label:
+    description: 'Label to mark Pull Request introducing breaking changes as safe and expected.'
+    default: 'approved-breaking-change'
+    required: true
+  schema:
+    description: |
+      Ref and Path to GraphQL Schema (e.g. 'master:schema.graphql')
+      * Ref is needed where 'endpoint' is not defined
+    required: true
+  endpoint:
+    description: |
+      Url to your GraphQL API
+      When using an endpoint, 'schema' should point to a file (without a reference - branch name for example)
+    required: false
+  github-token:
+    default: ${{ github.token }}
+    description: 'Github Token. Use {{ github.token }} by default'
+    required: false
+  experimental_merge:
+    description: |
+      Merge Pull Request's branch with the target branch to get the schema.
+      Helps to get the correct state of schema when Pull Request is behind the target branch
+    default: 'false'
+    required: false
+
+outputs:
+  changes:
+    description: 'Total number of changes'
+
+runs:
+  using: 'node12'
+  main: 'action/index.js'
+
+branding:
+  icon: 'check'
+  color: 'white'
