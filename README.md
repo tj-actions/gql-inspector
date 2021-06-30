@@ -8,7 +8,7 @@ Run GraphQL inspector
 ...
     steps:
       - uses: actions/checkout@v3
-      - name: Code coverage-reporter
+      - name: Run GraphQL inspector
         uses: tj-actions/gql-inspector@v1
         with:
           schema: 'main:schema.graphql'
