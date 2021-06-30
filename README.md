@@ -7,7 +7,7 @@ Run GraphQL inspector
 ```yaml
 ...
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       - name: Run GraphQL inspector
         uses: tj-actions/gql-inspector@v1
         with:
