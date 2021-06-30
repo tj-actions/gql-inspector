@@ -12,6 +12,7 @@ Run GraphQL inspector
         uses: tj-actions/gql-inspector@v1
         with:
           schema: 'main:schema.graphql'
+          fail-on-breaking: false
 ```
 
 *   Free software: [MIT license](LICENSE)
