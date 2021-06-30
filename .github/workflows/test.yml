@@ -74,4 +74,4 @@ jobs:
       - uses: ./
         if: steps.branch-name.outputs.is_default == 'false' && github.actor != 'dependabot[bot]' && github.actor != 'dependabot'
         with:
-          schema: 'main:schema.graphql'
+          schema: 'main:__tests__/schema.graphql'
