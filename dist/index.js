@@ -272,7 +272,10 @@ function updateCheckRun(octokit, checkId, { conclusion, output }) {
         // Success or Neutral
     });
 }
-run();
+// eslint-disable-next-line github/no-then
+run().catch(e => {
+    core.setFailed(e.message || e);
+});
 
 
 /***/ }),
