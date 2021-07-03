@@ -28,7 +28,7 @@
     "@actions/github": "5.0.0",
     "@graphql-inspector/github": "2.6.1",
     "graphql": "15.5.1",
-    "probot": "12.0.0"
+    "probot": "12.1.0"
   },
   "devDependencies": {
     "@types/jest": "26.0.23",
