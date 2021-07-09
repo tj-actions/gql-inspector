@@ -4,7 +4,6 @@ Run GraphQL inspector
 
 <img width="799" alt="Screen Shot 2021-06-30 at 6 21 31 PM" src="https://user-images.githubusercontent.com/17484350/124038955-05489580-d9d0-11eb-8b5b-840fc68099c9.png">
 
-
 ## Usage
 
 ```yaml
